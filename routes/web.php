@@ -15,9 +15,18 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
+
+
+
+
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/home', function () {
+    return view('welcome');
+});
+
 Route::get('/',[HomeController::class,'index'])->name('home');
 Route::get('/helicopt',[HelicoptController::class,'heli'])->name('helicopt');
 Route::middleware([
